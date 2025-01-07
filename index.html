@@ -46,54 +46,76 @@
 
     <section id="projects" class="section">
         <h2>Projects</h2>
-        <h3>1.pythonを使用した4択クイズ</h3>
+            <ol>
+                <li>
+        <h3>pythonを使用した4択クイズ</h3>
         <p>pythonを用いて4択クイズを作成した。これは tkinter を使用して作成されたPythonのGUIアプリケーションである。クイズの内容はドラゴンボールに出てくる頭がツルツルなキャラクターを当てるゲームとなっている。
             キャラクターはクリリン、スポポビッチ、天津飯、ナッパの4人である。遊び方は、各問題に対して写真が一枚表示され、その写真が4人うち誰なのかを当てるゲームになっている。
             ドラゴンボールのことを知らない人でも楽しめるよう最初に各キャラの紹介を行い、その後クイズを行う仕組みになっている。
             解いていくにつれて難易度が上がっていき、最終正解した数が表示される。 </p>
         <p>以下に実際にどのようなものなのかを表す動画を示す。</p>
-        <video controls width="450px" style="border: 1px solid #ccc; border-radius: 8px;">
-            <source src="quiz-video.mp4" type="video/mp4">
-            お使いのブラウザは動画タグをサポートしていません。
-        </video>
-
-        <h3>2.Kicadを用いた基板の作成</h3>
+        <img src="quiz.png" alt="クイズの外観図" style="width: 350px; border: 1px solid #ccc; border-radius: 8px;">
+                </li>
+                <li>
+        <h3>Kicadを用いた基板の作成</h3>
         <p>CADの実習の課題で自由に基板を作成するという課題があった。そこでシルクプリントやLEDを使い、元気玉を再現した基板を作成した。
             写真ではふざけているように見えるがしっかりと、LEDが点灯するように配線をしている。この課題で私はデザイン性を重視した。
             改めて見直すと部品が一つ透明化している部分は謎であるため、追求しないでいただきたい。これは、ほぼ外観重視のLEDを点灯させる基盤となっている。 </p>   
         <p>基板の外観図</p>
         <img src="pcb-design.jpg" alt="基板の外観図" style="width: 350px; border: 1px solid #ccc; border-radius: 8px;">
+                </li>
+            </ol>
     </section>
+
+
 
     <section id="research" class="section">
         <h2>Research</h2>
-        <p>今回の基礎研究ではマリオの世界観を取り入れ、お客さんに楽しんでもらうことを第一に考えて作成した。お寿司を掴むためのハンドは以下の画像に示す。</p>
+        <div class="page-wrapper">
+            <div class="page-content">
+                <h3>どのようなものか</h3>
+                <p>今回の基礎研究ではマリオの世界観を取り入れ、お客さんに楽しんでもらうことを第一に考えて作成した。お寿司を掴むためのハンドは以下の画像に示す。</p>
         <img src="hand-design.jpg" alt="寿司を掴むためのハンド" style="width: 450px; border: 1px solid #ccc; border-radius: 8px;">
         <p>このハンドはパックンフラワーを採用しており、見た目からの印象がとても強いため、お客様に楽しんでいただけると思う。また、某寿司店のゲームシステムなども取り入れ、遊び要素満載な寿司提供システムにした。</p>
         <p>私は回路とミニゲームの1つを担当した。</p>
-
-        <h3>回路設計</h3>
-        <p>ハンドを動かすために必要なサーボモータの回路と、皿の枚数をカウントするのに必要なマイクロスイッチの回路を設計した。回路図は以下の通りになっている。</p>
-        <img src="circuit-diagram_1.png" alt="回路図1" style="width: 300px; border: 1px solid #ccc; border-radius: 8px;">
-        <img src="circuit-diagram_2.png" alt="回路図2" style="width: 450px; border: 1px solid #ccc; border-radius: 8px;">
-        <p>サーボモータの回路ではArduino r4 wifi、サーボモータ、直流安定化電源を使用した。Arduinoに内部抵抗があるため抵抗は使用しなかった。
-            今回使用したサーボモータは5V以上の電圧で動くため、直流安定化電源を使用して供給を行った。</p>
-        <p>マイクロスイッチの回路ではRaspberry Pi 4 Model B､ マイクロスイッチ(Z-15HW78-B)を使用した。この回路は、マイクロスイッチが押されたときにHの信号を送り、Raspberry Piがその信号を受け取るという動作を行うための回路である。</p>
-        
-        <h3>ミニゲームの作成</h3>
-        <p>ミニゲームとして、スロットを作成した。これはhtml、CSS、JavaScriptを用いて作成した。このゲームはジャグラーと同じ仕組みになっており、各横列または斜めで同じ絵柄を3つそろえると「あたり」という判定になっている。画像の種類は6種類あり、ランダムで回転するようにした。あたりの判定だけではなく、リーチ判定も追加しており、各横列または斜めで同じ絵柄が2枚そろった場合に、「リーチ」と表示されるようにしている。目押しで止めれるようになっているため、運に頼らず、実力で楽しめるようになっている。また、様々な演出を追加し、遊んでもらう人により楽しんでもらえるような要素を取り入れている。</p>
-        <video controls width="450" style="border: 1px solid #ccc; border-radius: 8px;">
-            <source src="slot-game-video.mp4" type="video/mp4">
-            お使いのブラウザは動画タグをサポートしていません。
-        </video>
+            </div>
+            <div class="page-content">
+                <h3>回路設計</h3>
+                <p>ハンドを動かすために必要なサーボモータの回路と、皿の枚数をカウントするのに必要なマイクロスイッチの回路を設計した。回路図は以下の通りになっている。</p>
+                <img src="circuit-diagram_1.png" alt="回路図1" style="width: 300px; border: 1px solid #ccc; border-radius: 8px;">
+                <img src="circuit-diagram_2.png" alt="回路図2" style="width: 450px; border: 1px solid #ccc; border-radius: 8px;">
+                <p>サーボモータの回路ではArduino r4 wifi、サーボモータ、直流安定化電源を使用した。Arduinoに内部抵抗があるため抵抗は使用しなかった。
+                    今回使用したサーボモータは5V以上の電圧で動くため、直流安定化電源を使用して供給を行った。</p>
+                <p>マイクロスイッチの回路ではRaspberry Pi 4 Model B､ マイクロスイッチ(Z-15HW78-B)を使用した。この回路は、マイクロスイッチが押されたときにHの信号を送り、Raspberry Piがその信号を受け取るという動作を行うための回路である。</p>
+            </div>
+            <div class="page-content">
+                <h3>ミニゲームの作成</h3>
+                <p>ミニゲームとして、スロットを作成した。これはhtml、CSS、JavaScriptを用いて作成した。このゲームはジャグラーと同じ仕組みになっており、各横列または斜めで同じ絵柄を3つそろえると「あたり」という判定になっている。画像の種類は6種類あり、ランダムで回転するようにした。あたりの判定だけではなく、リーチ判定も追加しており、各横列または斜めで同じ絵柄が2枚そろった場合に、「リーチ」と表示されるようにしている。目押しで止めれるようになっているため、運に頼らず、実力で楽しめるようになっている。また、様々な演出を追加し、遊んでもらう人により楽しんでもらえるような要素を取り入れている。</p>
+                <img src="game.png" alt="スロット" style="width: 450px; border: 1px solid #ccc; border-radius: 8px;">
+            </div>
+        </div>
+        <div class="navigation-buttons">
+            <button id="prev-btn" class="nav-btn">&#x2190;</button>
+            <button id="next-btn" class="nav-btn">&#x2192;</button>
+        </div>
     </section>
+
 
     <section id="skills" class="section">
         <h2>Skills</h2>
-        <p>工学的なスキルは授業で取得したものだけである。現在私が扱えるというスキル</p>
-        <p>プログラミング言語:C言語、python、JavaScript、Arduino言語</p>
-        <p>CAD:Creo、Fusion360、Kicad</p>
-        <p>工作機械:旋盤、ボール盤</p>
+        <p>工学的なスキルは授業で取得したものだけである。現在私が扱えるスキル</p>
+        <ul>
+            <li><h3>プログラミング言語</h3>
+                <p>C言語、python、JavaScript、Arduino言語</p>
+            </li>
+            <li><h3>CAD</h3>
+                <p>Creo、Fusion360、Kicad</p>
+            </li>   
+            <li><h3>工作機械</h3>
+                <p>旋盤、ボール盤</p>
+            </li>
+        </ul>
+        
         <p>熟練度を★3段階評価で示す。</p>
         <p> ★3:kicad</p>
         <p> ★2:C言語、python、Arduino言語、旋盤、ボール盤、Fusion360</p>
@@ -104,10 +126,12 @@
     <section id="activities" class="section">
         <h2>Activities</h2>
         <p>1年生から3年生まで陸上部に所属していた。</p>
-        <p>1年生:近畿高専大会  4×100mリレーで2位  (全国高専大会出場権ゲット)
-        全国高専大会  4×100mリレーで8位  入賞 </p>
-        <p> 2年生:近畿高専大会  200m走 3位  全国大会出場権ゲット but 全国大会棄権 </p>
-        <p> 3年生:近畿高専大会  200m走 3位  全国大会出場権ゲット but 全国大会棄権 </p>
+        <ul>
+            <li>1年生:近畿高専大会  4×100mリレーで2位  (全国高専大会出場権ゲット)
+                全国高専大会  4×100mリレーで8位  入賞 </li>
+            <li>2年生:近畿高専大会  200m走 3位  全国大会出場権ゲット but 全国大会不参加</li>
+            <li>3年生:近畿高専大会  200m走 3位  全国大会出場権ゲット but 全国大会不参加</li>
+        </ul>
     </section>
 
     <footer>
