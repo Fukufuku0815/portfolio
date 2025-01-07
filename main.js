@@ -33,27 +33,39 @@ document.addEventListener('scroll', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    let currentPage = 0;
-    const pages = document.querySelectorAll('.page-content');
-    const totalPages = pages.length;
+// ページ遷移を制御するJavaScript
+let currentPage = 1;
+const totalPages = 3;
+const pages = document.querySelectorAll('.page-content');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
 
-    document.getElementById('prev-btn').addEventListener('click', function () {
-        if (currentPage > 0) {
-            pages[currentPage].classList.remove('active');
-            currentPage--;
-            pages[currentPage].classList.add('active');
+// ページを表示する関数
+function showPage(pageNumber) {
+    pages.forEach((page, index) => {
+        if (index === pageNumber - 1) {
+            page.classList.add('active');
+        } else {
+            page.classList.remove('active');
         }
     });
+}
 
-    document.getElementById('next-btn').addEventListener('click', function () {
-        if (currentPage < totalPages - 1) {
-            pages[currentPage].classList.remove('active');
-            currentPage++;
-            pages[currentPage].classList.add('active');
-        }
-    });
-
-    // Initialize the first page
-    pages[currentPage].classList.add('active');
+// 前のページに移動
+prevBtn.addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+    }
 });
+
+// 次のページに移動
+nextBtn.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
+    }
+});
+
+// 初期ページの表示
+showPage(currentPage);

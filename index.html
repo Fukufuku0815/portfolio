@@ -68,60 +68,88 @@
     </section>
 
 
-
     <section id="research" class="section">
         <h2>Research</h2>
         <div class="page-wrapper">
-            <div class="page-content">
-                <h3>どのようなものか</h3>
-                <p>今回の基礎研究ではマリオの世界観を取り入れ、お客さんに楽しんでもらうことを第一に考えて作成した。お寿司を掴むためのハンドは以下の画像に示す。</p>
-        <img src="hand-design.jpg" alt="寿司を掴むためのハンド" style="width: 450px; border: 1px solid #ccc; border-radius: 8px;">
-        <p>このハンドはパックンフラワーを採用しており、見た目からの印象がとても強いため、お客様に楽しんでいただけると思う。また、某寿司店のゲームシステムなども取り入れ、遊び要素満載な寿司提供システムにした。</p>
-        <p>私は回路とミニゲームの1つを担当した。</p>
+            <div class="page-content" id="page1">
+                <div class="text">
+                    <h3>どのようなものか</h3>
+                    <p>今回の基礎研究ではマリオの世界観を取り入れ、お客さんに楽しんでもらうことを第一に考えて作成した。お寿司を掴むためのハンドは以下の画像に示す。</p>
+                    <p>このハンドはパックンフラワーを採用しており、見た目からの印象がとても強いため、お客様に楽しんでいただけると思う。また、某寿司店のゲームシステムなども取り入れ、遊び要素満載な寿司提供システムにした。</p>
+                    <p>私は回路とミニゲームの1つを担当した。</p>
+                </div>
+                <div class="image">
+                    <img src="hand-design.jpg" alt="寿司を掴むためのハンド">
+                </div>
             </div>
-            <div class="page-content">
-                <h3>回路設計</h3>
-                <p>ハンドを動かすために必要なサーボモータの回路と、皿の枚数をカウントするのに必要なマイクロスイッチの回路を設計した。回路図は以下の通りになっている。</p>
-                <img src="circuit-diagram_1.png" alt="回路図1" style="width: 300px; border: 1px solid #ccc; border-radius: 8px;">
-                <img src="circuit-diagram_2.png" alt="回路図2" style="width: 450px; border: 1px solid #ccc; border-radius: 8px;">
-                <p>サーボモータの回路ではArduino r4 wifi、サーボモータ、直流安定化電源を使用した。Arduinoに内部抵抗があるため抵抗は使用しなかった。
-                    今回使用したサーボモータは5V以上の電圧で動くため、直流安定化電源を使用して供給を行った。</p>
-                <p>マイクロスイッチの回路ではRaspberry Pi 4 Model B､ マイクロスイッチ(Z-15HW78-B)を使用した。この回路は、マイクロスイッチが押されたときにHの信号を送り、Raspberry Piがその信号を受け取るという動作を行うための回路である。</p>
+    
+            <div class="page-content" id="page2">
+                <div class="text">
+                    <h3>回路設計</h3>
+                    <p>ハンドを動かすために必要なサーボモータの回路と、皿の枚数をカウントするのに必要なマイクロスイッチの回路を設計した。回路図は以下の通りになっている。</p>
+                    <p>サーボモータの回路ではArduino r4 wifi、サーボモータ、直流安定化電源を使用した。Arduinoに内部抵抗があるため抵抗は使用しなかった。</p>
+                    <p>マイクロスイッチの回路ではRaspberry Pi 4 Model B､ マイクロスイッチ(Z-15HW78-B)を使用した。この回路は、マイクロスイッチが押されたときにHの信号を送り、Raspberry Piがその信号を受け取るという動作を行うための回路である。</p>
+                </div>
+                <div class="image">
+                    <img src="circuit-diagram_1.png" alt="回路図1">
+                    <img src="circuit-diagram_2.png" alt="回路図2">
+                </div>
             </div>
-            <div class="page-content">
-                <h3>ミニゲームの作成</h3>
-                <p>ミニゲームとして、スロットを作成した。これはhtml、CSS、JavaScriptを用いて作成した。このゲームはジャグラーと同じ仕組みになっており、各横列または斜めで同じ絵柄を3つそろえると「あたり」という判定になっている。画像の種類は6種類あり、ランダムで回転するようにした。あたりの判定だけではなく、リーチ判定も追加しており、各横列または斜めで同じ絵柄が2枚そろった場合に、「リーチ」と表示されるようにしている。目押しで止めれるようになっているため、運に頼らず、実力で楽しめるようになっている。また、様々な演出を追加し、遊んでもらう人により楽しんでもらえるような要素を取り入れている。</p>
-                <img src="game.png" alt="スロット" style="width: 450px; border: 1px solid #ccc; border-radius: 8px;">
+    
+            <div class="page-content" id="page3">
+                <div class="text">
+                    <h3>ミニゲームの作成</h3>
+                    <p>ミニゲームとして、スロットを作成した。これはhtml、CSS、JavaScriptを用いて作成した。このゲームはジャグラーと同じ仕組みになっており、各横列または斜めで同じ絵柄を3つそろえると「あたり」という判定になっている。画像の種類は6種類あり、ランダムで回転するようにした。</p>
+                    <p>あたりの判定だけではなく、リーチ判定も追加しており、各横列または斜めで同じ絵柄が2枚そろった場合に、「リーチ」と表示されるようにしている。目押しで止めれるようになっているため、運に頼らず、実力で楽しめるようになっている。</p>
+                    <p>また、様々な演出を追加し、遊んでもらう人により楽しんでもらえるような要素を取り入れている。</p>
+                </div>
+                <div class="image">
+                    <img src="game.png" alt="スロット">
+                </div>
             </div>
         </div>
+    
         <div class="navigation-buttons">
             <button id="prev-btn" class="nav-btn">&#x2190;</button>
             <button id="next-btn" class="nav-btn">&#x2192;</button>
         </div>
     </section>
-
-
     <section id="skills" class="section">
-        <h2>Skills</h2>
-        <p>工学的なスキルは授業で取得したものだけである。現在私が扱えるスキル</p>
-        <ul>
-            <li><h3>プログラミング言語</h3>
-                <p>C言語、python、JavaScript、Arduino言語</p>
-            </li>
-            <li><h3>CAD</h3>
-                <p>Creo、Fusion360、Kicad</p>
-            </li>   
-            <li><h3>工作機械</h3>
-                <p>旋盤、ボール盤</p>
-            </li>
-        </ul>
-        
-        <p>熟練度を★3段階評価で示す。</p>
-        <p> ★3:kicad</p>
-        <p> ★2:C言語、python、Arduino言語、旋盤、ボール盤、Fusion360</p>
-        <p>★1:Creo、JavaScript</p>
+            <h2>Skill</h2>
+            <p>工学的なスキルは授業で取得したものだけである。熟練度を★3段階評価で示す。</p>
+            <p>現在私が扱えるスキル</p>
+            
+            <p> ★3:kicad</p>
+            <p> ★2:C言語、python、Arduino言語、旋盤、ボール盤、Fusion360</p>
+            <p>★1:Creo、JavaScript</p>
+            
+            <!-- スキルカード -->
+            <div class="skills-wrapper">
+                <div class="card">
+                    <img src="programming.jpg" alt="Programming Languages">
+                    <div class="card-body">
+                        <h3>プログラミング言語</h3>
+                         <p>Python, JavaScript</p>
+                         <p> C言語, Arduino言語</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="cad.jpg" alt="CAD">
+                    <div class="card-body">
+                        <h3>CAD</h3>
+                        <p>Fusion360, kicad, Creo</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="machinery.jpg" alt="Machinery">
+                    <div class="card-body">
+                        <h3>工作機械</h3>
+                        <p>旋盤, ボール盤</p> 
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    </section>
 
     <section id="activities" class="section">
         <h2>Activities</h2>
