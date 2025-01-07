@@ -9,23 +9,21 @@
 <body>
     <header>
         <div class="hero">
-            <!-- 修正されたタイトル -->
             <h1 class="main-title">
                 <span class="line1">Welcome to</span>
                 <span class="line2">My Portfolio</span>
             </h1>
-            <!-- 一文字ずつ跳ねるエフェクト -->
             <div class="bouncing-text">
                 <span>M</span><span>y</span> <span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span>
             </div>
         </div>
-        <!-- ハンバーガーメニュー -->
+
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <!-- ナビゲーションメニュー -->
+        
         <nav class="nav-menu" id="nav-menu">
             <ul>
                 <li><a href="#about">About Me</a></li>
@@ -39,32 +37,45 @@
 
     <section id="about" class="section">
         <h2>About Me</h2>
-        <p>私は大阪府のどこかの池の近くに住んでいるものである。</p>
-        <p>最近の墓場まで持っていきったい謎ランキング一位は、家でgooglemapを開くとなぜか池の中にいると判定されることである。</p>
-        <p>所属は、大阪公立大学工業高等専門学校の4年メカトロニクスコース（19歳）の学生である。趣味は走ること、音楽を聴くこと、アニメを見ることである。</p>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="my.JPG" alt="mypicture">
+            </div>
+            <div class="about-text">
+                <p>私は大阪府のどこかの池の近くに住んでいるものである。</p>
+                <p>最近の墓場まで持っていきったい謎ランキング一位は、家でgooglemapを開くとなぜか池の中にいると判定されることである。</p>
+                <p>所属は、大阪公立大学工業高等専門学校の4年メカトロニクスコース（19歳）の学生である。趣味は走ること、音楽を聴くこと、アニメを見ることである。</p>
+            </div>
+        </div>
     </section>
 
     <section id="projects" class="section">
-        <h2>Projects</h2>
-            <ol>
-                <li>
-        <h3>pythonを使用した4択クイズ</h3>
-        <p>pythonを用いて4択クイズを作成した。これは tkinter を使用して作成されたPythonのGUIアプリケーションである。クイズの内容はドラゴンボールに出てくる頭がツルツルなキャラクターを当てるゲームとなっている。
-            キャラクターはクリリン、スポポビッチ、天津飯、ナッパの4人である。遊び方は、各問題に対して写真が一枚表示され、その写真が4人うち誰なのかを当てるゲームになっている。
-            ドラゴンボールのことを知らない人でも楽しめるよう最初に各キャラの紹介を行い、その後クイズを行う仕組みになっている。
-            解いていくにつれて難易度が上がっていき、最終正解した数が表示される。 </p>
-        <p>以下に実際にどのようなものなのかを表す動画を示す。</p>
-        <img src="quiz.png" alt="クイズの外観図" style="width: 350px; border: 1px solid #ccc; border-radius: 8px;">
-                </li>
-                <li>
-        <h3>Kicadを用いた基板の作成</h3>
-        <p>CADの実習の課題で自由に基板を作成するという課題があった。そこでシルクプリントやLEDを使い、元気玉を再現した基板を作成した。
-            写真ではふざけているように見えるがしっかりと、LEDが点灯するように配線をしている。この課題で私はデザイン性を重視した。
-            改めて見直すと部品が一つ透明化している部分は謎であるため、追求しないでいただきたい。これは、ほぼ外観重視のLEDを点灯させる基盤となっている。 </p>   
-        <p>基板の外観図</p>
-        <img src="pcb-design.jpg" alt="基板の外観図" style="width: 350px; border: 1px solid #ccc; border-radius: 8px;">
-                </li>
-            </ol>
+        <h2>Deliverables</h2>
+        <ol>
+            <li>
+                <h3>pythonを使用した4択クイズ</h3>
+                <p class="project-text">
+                    pythonを用いて4択クイズを作成した。これは tkinter を使用して作成されたPythonのGUIアプリケーションである。クイズの内容はドラゴンボールに出てくる頭がツルツルなキャラクターを当てるゲームとなっている。
+                    キャラクターはクリリン、スポポビッチ、天津飯、ナッパの4人である。遊び方は、各問題に対して写真が一枚表示され、その写真が4人うち誰なのかを当てるゲームになっている。
+                    ドラゴンボールのことを知らない人でも楽しめるよう最初に各キャラの紹介を行い、その後クイズを行う仕組みになっている。
+                    解いていくにつれて難易度が上がっていき、最終正解した数が表示される。
+                </p>
+                <div class="project-image">
+                    <img src="quiz.png" alt="クイズの外観図">
+                </div>
+            </li>
+            <li>
+                <h3>Kicadを用いた基板の作成</h3>
+                <p class="project-text">
+                    CADの実習の課題で自由に基板を作成するという課題があった。そこでシルクプリントやLEDを使い、元気玉を再現した基板を作成した。
+                    写真ではふざけているように見えるがしっかりと、LEDが点灯するように配線をしている。この課題で私はデザイン性を重視した。
+                    改めて見直すと部品が一つ透明化している部分は謎であるため、追求しないでいただきたい。これは、ほぼ外観重視のLEDを点灯させる基盤となっている。
+                </p>
+                <div class="project-image">
+                    <img src="pcb-design.jpg" alt="基板の外観図">
+                </div>
+            </li>
+        </ol>
     </section>
 
 
@@ -119,9 +130,9 @@
             <p>工学的なスキルは授業で取得したものだけである。熟練度を★3段階評価で示す。</p>
             <p>現在私が扱えるスキル</p>
             
-            <p> ★3:kicad</p>
-            <p> ★2:C言語、python、Arduino言語、旋盤、ボール盤、Fusion360</p>
-            <p>★1:Creo、JavaScript</p>
+            <p> ★3:kicad, Arduino言語</p>
+            <p> ★2:C言語, python, 旋盤, ボール盤, Fusion360</p>
+            <p>★1:Creo, JavaScript</p>
             
             <!-- スキルカード -->
             <div class="skills-wrapper">

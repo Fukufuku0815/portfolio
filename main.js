@@ -16,21 +16,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-document.addEventListener('scroll', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.section');
-    const triggerHeight = window.innerHeight / 2;
 
-    sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        const bottom = section.getBoundingClientRect().bottom;
+    function checkVisibility() {
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.75 && rect.bottom > 0) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+    }
 
-        if (top < triggerHeight && bottom > triggerHeight) {
-            section.classList.add('visible');
-        } else {
-            section.classList.remove('visible');
-        }
-    });
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();  // 初回チェック
 });
 
 // ページ遷移を制御するJavaScript
